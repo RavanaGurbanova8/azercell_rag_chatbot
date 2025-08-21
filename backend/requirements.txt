@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+httpx
+boto3
+chromadb
+sentence_transformers
+python-dotenv
