@@ -1,4 +1,3 @@
-from typing import Optional
 import boto3
 from app.services.config import AWS_REGION, KNOWLEDGE_BASE_ID, KB_TOP_K
 
@@ -32,6 +31,6 @@ def get_kb_context(user_query: str) -> str:
 			if content:
 				parts.append(f"Doc {i+1}: {content}")
 		return "\n\n".join(parts)
-	except Exception as e:
+	except Exception:
 		# In production, log this
 		return ""
