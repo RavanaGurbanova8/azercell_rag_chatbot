@@ -1,7 +1,6 @@
 fastapi
 uvicorn[standard]
-httpx
+pydantic
 boto3
-chromadb
-sentence_transformers
 python-dotenv
+requests
