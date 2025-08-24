@@ -7,10 +7,13 @@ from typing import Optional
 from app.services.bedrock_runtime import stream_deltas, invoke_non_stream
 from app.services.kb_runtime import get_kb_context
 
+from fastapi import APIRouter
 
-router = APIRouter(prefix="", tags=["chat"])
+router = APIRouter()
 
-
+@router.get("/test")
+async def test():
+    return {"msg": "Chat router works"}
 class ChatIn(BaseModel):
 	prompt: str
 	system: Optional[str] = None
